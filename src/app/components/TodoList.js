@@ -5,19 +5,21 @@ import DeleteTodo from './DeleteTodo';
 class TodoList extends React.Component{
   render() {
     return (
-      <table>
-        <tr>
-          <thead>
-            <tr>
-              <th>Tasks</th>
-              <th>Actions</th>
-            </tr>
-          </thead>
-          <tbody>
-            {this.props.todos.map((todo, id)=> <DeleteTodo key={id} todo={todo} />)}
-          </tbody>
-        </tr>
-      </table>
+      <div className="container">
+          <div className="col-sm-12">
+            <table className="table">
+                <thead>
+                  <tr>
+                    <th>Tasks</th>
+                    <th>Actions</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {this.props.todos.map((todo, id)=> <DeleteTodo key={id} todo={todo} />)}
+                </tbody>
+            </table>
+          </div>
+        </div>
     )
   }
 }

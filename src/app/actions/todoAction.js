@@ -1,7 +1,7 @@
 const addTodo= (text) => {
   return {
     type: 'ADD',
-    payload: text
+    text
   };
 };
 const deleteTodo = (id) => {
